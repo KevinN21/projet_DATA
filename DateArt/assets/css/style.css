@@ -120,11 +120,15 @@
     animation-name: slideInLeft;
 }
 
+.b-link:focus, .b-link:hover {
+    color: #c1272d;
+}
+
 .b-link {
     background: transparent;
     border-left: rgba(68, 68, 68, 0) solid 2px;
     color: #444444;
-    font-family: Helvetica-Neue, Helvetica, Arial, sans-serif;
+    font-family: candara;
     font-weight: 300;
     text-decoration: none;
     -webkit-transition: all 0.4s ease;
@@ -223,8 +227,8 @@
 /*NORMAL CSS*/
 
 .site-title {
-    margin-top: 4%;
-    font-size: 5vmax;
-    text-align: center;
-    font-family: harlow;
+    margin-top: 3%;
+    margin-left: 35%;
+    margin-right: 15%;
+    width: 30%;
 }
