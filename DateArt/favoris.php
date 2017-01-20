@@ -17,8 +17,6 @@
 <body>
 <?php require_once('template/header.html') ?>
 
-<<<<<<< HEAD
-=======
 <main>
   <section class="container">
     <article class="musee">
@@ -74,15 +72,10 @@
           </figcaption>
         </a>
       </figure>
-    
+
     </article>
   </section>
 </main>
-
-
-
-
->>>>>>> origin/master
 
 </body>
 </html>
