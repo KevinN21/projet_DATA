@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Date'Art</title>
 
     <link rel="stylesheet" href="assets/css/favoristyle.css">
@@ -20,59 +22,22 @@
 <main>
   <section class="container">
     <article class="musee">
+      <?php for ($i=0;$i<12;$i++): ?>
       <figure>
-        <a href="museefav.php">
           <figcaption class="col-xs-6">
+            <a href="museefav.php">
             <img src="assets/img/louvre.jpg" alt="musée du louvre">
             <p>Nom du musée</p>
           </figcaption>
-        </a><a href="museefav.php">
+            </a>
           <figcaption class="col-xs-6">
+            <a href="museefav.php">
             <img src="assets/img/louvre.jpg" alt="musée du louvre">
             <p>Nom du musée</p>
           </figcaption>
         </a>
       </figure>
-      <figure>
-        <a href="museefav.php">
-          <figcaption class="col-xs-6">
-            <img src="assets/img/louvre.jpg" alt="musée du louvre">
-            <p>Nom du musée</p>
-          </figcaption>
-        </a><a href="museefav.php">
-          <figcaption class="col-xs-6">
-            <img src="assets/img/louvre.jpg" alt="musée du louvre">
-            <p>Nom du musée</p>
-          </figcaption>
-        </a>
-      </figure>
-      <figure>
-        <a href="museefav.php">
-          <figcaption class="col-xs-6">
-            <img src="assets/img/louvre.jpg" alt="musée du louvre">
-            <p>Nom du musée</p>
-          </figcaption>
-        </a><a href="museefav.php">
-          <figcaption class="col-xs-6">
-            <img src="assets/img/louvre.jpg" alt="musée du louvre">
-            <p>Nom du musée</p>
-          </figcaption>
-        </a>
-      </figure>
-      <figure>
-        <a href="museefav.php">
-          <figcaption class="col-xs-6">
-            <img src="assets/img/louvre.jpg" alt="musée du louvre">
-            <p>Nom du musée</p>
-          </figcaption>
-        </a><a href="museefav.php">
-          <figcaption class="col-xs-6">
-            <img src="assets/img/louvre.jpg" alt="musée du louvre">
-            <p>Nom du musée</p>
-          </figcaption>
-        </a>
-      </figure>
-
+    <?php endfor; ?>
     </article>
   </section>
 </main>

@@ -16,7 +16,6 @@ main {
 }
 
 .details p{
-  font-style: "candara";
   font-size: 2em;
   text-align: justify;
   font-weight: lighter;
@@ -24,4 +23,10 @@ main {
 .description {
   font-size: 2em;
   text-align: justify;
+}
+.ourteam{
+  text-align: center;
+}
+.ourteam figure figcaption img{
+  margin-bottom: 12%;
 }
