@@ -13,7 +13,7 @@
 <body>
 <?php require_once('template/header.html') ?>
 
-
+ <img src="assets/img/louvre.jpg" width="800" height="600">
 
 </body>
 </html>

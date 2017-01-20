@@ -79,7 +79,7 @@
     width: 100%;
     position: absolute;
     z-index: 11;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 .b-nav:not(.open) {
@@ -136,8 +136,8 @@
 }
 
 .b-menu {
-    background: white;
-    border: white solid 2px;
+    background: rgb(255, 255, 255);
+    border: rgb(255, 255, 255) solid 2px;
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
@@ -191,7 +191,7 @@
 }
 
 .b-container:hover:not(.open) .bun-top, .b-container:hover:not(.open) .bun-mid, .b-container:hover:not(.open) .bun-bottom {
-    background: white;
+    background: rgb(255, 255, 255);
 }
 
 .b-container.open .b-main {
@@ -226,9 +226,18 @@
 
 /*NORMAL CSS*/
 
+body {
+    overflow: hidden;
+}
+
 .site-title {
     margin-top: 3%;
     margin-left: 35%;
     margin-right: 15%;
     width: 30%;
+}
+
+.tind-card {
+    width: 800%;
+    height: 800%;
 }
