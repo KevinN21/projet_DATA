@@ -18,3 +18,7 @@ figcaption p{
   font-family: "Castellar";
   font-size: 2em;
 }
+a p, a:hover p, a:visited p, a:active p, a:focus p{
+  text-decoration: none;
+  color: #313131;
+}

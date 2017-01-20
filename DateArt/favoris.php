@@ -21,45 +21,58 @@
   <section class="container">
     <article class="musee">
       <figure>
-        <figcaption class="col-xs-6">
-          <img src="assets/img/louvre.jpg" alt="musée du louvre">
-          <p>Nom du musée</p>
-        </figcaption>
-        <figcaption class="col-xs-6">
-          <img src="assets/img/louvre.jpg" alt="musée du louvre">
-          <p>Nom du musée</p>
-        </figcaption>
+        <a href="museefav.php">
+          <figcaption class="col-xs-6">
+            <img src="assets/img/louvre.jpg" alt="musée du louvre">
+            <p>Nom du musée</p>
+          </figcaption>
+        </a><a href="museefav.php">
+          <figcaption class="col-xs-6">
+            <img src="assets/img/louvre.jpg" alt="musée du louvre">
+            <p>Nom du musée</p>
+          </figcaption>
+        </a>
       </figure>
       <figure>
-        <figcaption class="col-xs-6">
-          <img src="assets/img/louvre.jpg" alt="musée du louvre">
-          <p>Nom du musée</p>
-        </figcaption>
-        <figcaption class="col-xs-6">
-          <img src="assets/img/louvre.jpg" alt="musée du louvre">
-          <p>Nom du musée</p>
-        </figcaption>
+        <a href="museefav.php">
+          <figcaption class="col-xs-6">
+            <img src="assets/img/louvre.jpg" alt="musée du louvre">
+            <p>Nom du musée</p>
+          </figcaption>
+        </a><a href="museefav.php">
+          <figcaption class="col-xs-6">
+            <img src="assets/img/louvre.jpg" alt="musée du louvre">
+            <p>Nom du musée</p>
+          </figcaption>
+        </a>
       </figure>
       <figure>
-        <figcaption class="col-xs-6">
-          <img src="assets/img/louvre.jpg" alt="musée du louvre">
-          <p>Nom du musée</p>
-        </figcaption>
-        <figcaption class="col-xs-6">
-          <img src="assets/img/louvre.jpg" alt="musée du louvre">
-          <p>Nom du musée</p>
-        </figcaption>
+        <a href="museefav.php">
+          <figcaption class="col-xs-6">
+            <img src="assets/img/louvre.jpg" alt="musée du louvre">
+            <p>Nom du musée</p>
+          </figcaption>
+        </a><a href="museefav.php">
+          <figcaption class="col-xs-6">
+            <img src="assets/img/louvre.jpg" alt="musée du louvre">
+            <p>Nom du musée</p>
+          </figcaption>
+        </a>
       </figure>
       <figure>
-        <figcaption class="col-xs-6">
-          <img src="assets/img/louvre.jpg" alt="musée du louvre">
-          <p>Nom du musée</p>
-        </figcaption>
-        <figcaption class="col-xs-6">
-          <img src="assets/img/louvre.jpg" alt="musée du louvre">
-          <p>Nom du musée</p>
-        </figcaption>
+        <a href="museefav.php">
+          <figcaption class="col-xs-6">
+            <img src="assets/img/louvre.jpg" alt="musée du louvre">
+            <p>Nom du musée</p>
+          </figcaption>
+        </a><a href="museefav.php">
+          <figcaption class="col-xs-6">
+            <img src="assets/img/louvre.jpg" alt="musée du louvre">
+            <p>Nom du musée</p>
+          </figcaption>
+        </a>
       </figure>
+    
     </article>
   </section>
 </main>
