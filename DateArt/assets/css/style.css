@@ -79,6 +79,7 @@
     width: 100%;
     position: absolute;
     z-index: 11;
+    background-color: white;
 }
 
 .b-nav:not(.open) {
@@ -94,17 +95,18 @@
     transform: translateX(-250px);
 }
 
-.b-nav li:not(.open) {
+
+/*.b-nav li:not(.open) {
     -webkit-animation-duration: 0.4s;
     animation-duration: 0.4s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     -webkit-animation-name: slideOutLeft;
     animation-name: slideOutLeft;
-}
+}*/
 
 .b-nav li:first-child {
-    padding-top: 30%;
+    padding-top: 23%;
 }
 
 .b-nav.open {
@@ -131,8 +133,6 @@
     font-family: candara;
     font-weight: 300;
     text-decoration: none;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
 }
 
 .b-menu {
