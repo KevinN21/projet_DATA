@@ -95,16 +95,6 @@
     transform: translateX(-250px);
 }
 
-
-/*.b-nav li:not(.open) {
-    -webkit-animation-duration: 0.4s;
-    animation-duration: 0.4s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-name: slideOutLeft;
-    animation-name: slideOutLeft;
-}*/
-
 .b-nav li:first-child {
     padding-top: 23%;
 }
@@ -227,17 +217,66 @@
 /*NORMAL CSS*/
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
 }
 
 .site-title {
     margin-top: 3%;
     margin-left: 35%;
-    margin-right: 15%;
-    width: 30%;
+    width: 30vw;
+    height: 10vh;
 }
 
 .tind-card {
-    width: 800%;
-    height: 800%;
+    margin-top: 10%;
+    margin-left: 9%;
+    -webkit-box-shadow: 4px 4px 22px 0px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 4px 4px 22px 0px rgba(0, 0, 0, 0.42);
+    box-shadow: 4px 4px 22px 0px rgba(0, 0, 0, 0.42);
+}
+
+.separation {
+    height: 10vh;
+}
+
+.button1 {
+    margin-left: 11%;
+    border-radius: 50px;
+    background: transparent;
+    border-color: transparent;
+    outline: 0;
+}
+
+.button2 {
+    margin-left: 14%;
+    border-radius: 50px;
+    background: transparent;
+    border-color: transparent;
+    outline: 0;
+}
+
+
+/*ACTIVE BUTTON*/
+
+.button1:active {
+    background-color: rgb(226, 70, 70);
+}
+
+.button2:active {
+    background-color: rgb(69, 168, 82);
+}
+
+
+/*END*/
+
+.red-cross {
+    width: 30vw;
+    height: 20vh;
+}
+
+.green-heart {
+    width: 30vw;
+    height: 20vh;
 }

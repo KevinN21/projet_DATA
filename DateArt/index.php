@@ -13,7 +13,13 @@
 <body>
 <?php require_once('template/header.html') ?>
 
- <img src="assets/img/louvre.jpg" width="800" height="600">
+ <img class="img-thumbnail tind-card" src="assets/img/louvre.jpg" width="800" height="600">
+
+ <p class="separation"></p>
+
+  <button class="button1"><img class="red-cross" src="assets/img/red_cross.svg" alt=""></button>
+
+ <button class="button2"><img class="green-heart" src="assets/img/green_heart.svg" alt=""></button>
 
 </body>
 </html>

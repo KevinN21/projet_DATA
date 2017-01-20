@@ -17,35 +17,6 @@
 <body>
 <?php require_once('template/header.html') ?>
 
-<main class="container">
-  <section class="col-xs-12">
-    <article>
-      <figure  class="col-xs-4">
-        <figcaption>
-          <img src="assets/img/louvre.jpg" alt="Photo du musée du Louvre, Paris">
-        </figcaption>
-      </figure>
-    </article>
-    <article>
-      <figure  class="col-xs-4">
-        <figcaption>
-          <img src="assets/img/louvre.jpg" alt="Photo du musée du Louvre, Paris">
-        </figcaption>
-      </figure>
-    </article>
-    <article>
-      <figure  class="col-xs-4">
-        <figcaption>
-          <img src="assets/img/louvre.jpg" alt="Photo du musée du Louvre, Paris">
-        </figcaption>
-      </figure>
-    </article>
-  </section>
-</main>
-
-
-
-
 
 </body>
 </html>
