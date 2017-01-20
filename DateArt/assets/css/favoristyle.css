@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Castellar";
+  src: url('../fonts/castellar.ttf');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main{
+  margin-top: 10%;
+}
+figcaption img {
+  width: 100%;
+}
+figcaption p{
+  font-family: "Castellar";
+  font-size: 2em;
+}
+a p, a:hover p, a:visited p, a:active p, a:focus p{
+  text-decoration: none;
+  color: #313131;
+}
