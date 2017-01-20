@@ -228,7 +228,7 @@
 /*NORMAL CSS*/
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .site-title {
