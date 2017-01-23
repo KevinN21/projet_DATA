@@ -40,5 +40,4 @@
   </section>
 </main>
 
-</body>
 </html>

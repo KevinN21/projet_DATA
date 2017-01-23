@@ -15,22 +15,22 @@
 </head>
 
 <body>
-<?php require_once('template/header.html') ?>
-<main class="container">
-  <section class="row">
-    <div class="col-md-12 text-center">
-     <img class="img-thumbnail" src="assets/img/louvre.jpg">
-   </div>
-   </section>
-   <section class="row da-buttons">
-     <div class="col-xs-6 text-center">
-       <button class="button1"><img class="red-cross" src="assets/img/red_cross.svg" alt=""></button>
-     </div>
-     <div class="col-xs-6 text-center">
-       <button class="button2"><img class="green-heart" src="assets/img/green_heart.svg" alt=""></button>
-     </div>
-   </section>
-</main>
-
+    <?php require_once('template/header.html') ?>
+    <main class="container">
+        <section class="row">
+            <div class="col-md-12 text-center">
+                <img class="img-thumbnail" src="assets/img/louvre.jpg">
+            </div>
+        </section>
+        <section class="row da-buttons">
+            <div class="col-xs-6 text-center">
+                <button class="button1"><img class="red-cross" src="assets/img/red_cross.svg" alt=""></button>
+            </div>
+            <div class="col-xs-6 text-center">
+                <button class="button2"><img class="green-heart" src="assets/img/green_heart.svg" alt=""></button>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
