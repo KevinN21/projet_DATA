@@ -238,12 +238,12 @@ body {
     box-shadow: 4px 4px 22px 0px rgba(0, 0, 0, 0.42);
 }
 
-.separation {
-    height: 10vh;
+.da-buttons{
+  margin-top: 25%;
 }
 
 .button1 {
-    margin-left: 11%;
+
     border-radius: 50px;
     background: transparent;
     border-color: transparent;
@@ -251,7 +251,6 @@ body {
 }
 
 .button2 {
-    margin-left: 14%;
     border-radius: 50px;
     background: transparent;
     border-color: transparent;
