@@ -1,42 +1,42 @@
-<!DOCTYPE html>
-<html>
+<?php
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	require_once "inc/libs.php";
 
-    <title>Date'Art</title>
+	$router->setBasePath('/'.PREFIX_PORTAL);
+	
+	$router->map('GET', '/', function(){
+		$index = true; 
+		require __DIR__ . '/inc/controler/home.php';
+	}, 'home');
 
-    <link rel="stylesheet" href="assets//css/style.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	$router->map('GET', '/favoris/', function(){
+		$index = true; 
+		require __DIR__ . '/inc/controler/favoris.php';
+	}, 'favoris');
 
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-</head>
+	$router->map('GET', '/favoris/[h:id]/', function($id){
+		$index = true; 
+		require __DIR__ . '/inc/controler/favoris.php';
+	}, 'favoris_id');
 
-<body>
-    <?php require_once('template/header.html') ?>
-    <main class="container">
-        <section class="row">
-            <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                <div class="thumbnail">
-                    <img src="assets/img/louvre.jpg">
-                    <div class="caption">
-                        <h1 class="nom-musee">MUSEE DU LOUVRE qu'il est beau</h1>
-                        <h2 class="ville-musee">Paname City</h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="row da-buttons">
-            <div class="col-xs-6 col-xs-push-1 text-center">
-                <button class="button1"><img class="red-cross" src="assets/img/red_cross.svg" alt=""></button>
-            </div>
-            <div class="col-xs-6 col-xs-pull-1 text-center">
-                <button class="button2"><img class="green-heart" src="assets/img/green_heart.svg" alt=""></button>
-            </div>
-        </section>
-    </main>
-</body>
 
-</html>
+
+
+
+	
+	$match = $router->match();
+
+
+	// call closure or throw 404 status
+	if( $match && is_callable( $match['target'] ) ) {
+			$mustache_options =  array('extension' => EXT_MU_TPL);
+			if($match['name'] != 'apercuAjax'){
+				
+				//callHeader($m, array('HREF' => 'css/style.css'));
+			}
+			
+			call_user_func_array( $match['target'], $match['params'] );
+	} else {
+			// no route was matched
+			header( $_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found');
+	}
