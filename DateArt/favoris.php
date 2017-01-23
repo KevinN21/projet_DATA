@@ -24,18 +24,16 @@
     <article class="musee">
       <?php for ($i=0;$i<12;$i++): ?>
       <figure>
-          <figcaption class="col-xs-6">
+          <figcaption class="col-xs-12 col-md-6">
             <a href="museefav.php">
             <img src="assets/img/louvre.jpg" alt="musée du louvre">
-            <p>Nom du musée</p>
+            <p>Nom du musée</p></a>
           </figcaption>
-            </a>
-          <figcaption class="col-xs-6">
+          <figcaption class="col-xs-12 col-md-6">
             <a href="museefav.php">
             <img src="assets/img/louvre.jpg" alt="musée du louvre">
-            <p>Nom du musée</p>
+            <p>Nom du musée</p></a>
           </figcaption>
-        </a>
       </figure>
     <?php endfor; ?>
     </article>
