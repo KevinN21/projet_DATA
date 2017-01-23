@@ -18,14 +18,14 @@
     <?php require_once('template/header.html') ?>
     <main class="container">
         <section class="row">
-            <div class="col-md-12 text-center">
-                <img class="img-responsive" src="assets/img/louvre.jpg">
-            </div>
-            <div class="row">
-                <h1 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nom-musee">MUSEE DU LOUVRE qui est beau</h1>
-            </div>
-            <div class="row">
-                <h2 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ville-musee">Paname City</h2>
+            <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                <div class="thumbnail">
+                    <img src="assets/img/louvre.jpg">
+                    <div class="caption">
+                        <h1 class="nom-musee">MUSEE DU LOUVRE qu'il est beau</h1>
+                        <h2 class="ville-musee">Paname City</h2>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="row da-buttons">
