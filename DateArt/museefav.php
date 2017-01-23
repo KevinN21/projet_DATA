@@ -27,7 +27,7 @@
       </a>
     </div>
       <div class="details col-md-7 col-xs-12">
-        <p>Musée du Louvre</p>
+        <h2>Musée du Louvre</h2>
         <p><i class="fa fa-map-marker" aria-hidden="true"></i> Panamecity</p>
         <p><i class="fa fa-phone" aria-hidden="true"></i> +33 820 150 450</p>
         <p><i class="fa fa-clock-o" aria-hidden="true"></i> 10h-19h du lundi au dimanche</p>

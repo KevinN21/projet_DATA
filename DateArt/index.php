@@ -22,7 +22,7 @@
      <img class="img-thumbnail" src="assets/img/louvre.jpg">
    </div>
    </section>
-   <section class="row button">
+   <section class="row da-buttons">
      <div class="col-xs-6 text-center">
        <button class="button1"><img class="red-cross" src="assets/img/red_cross.svg" alt=""></button>
      </div>
