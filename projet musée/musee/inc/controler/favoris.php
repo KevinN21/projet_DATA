@@ -1,11 +1,12 @@
 <?php
 
+
+header('Content-Type: text/html; charset=utf-8');
+
 if(isset($index)){
 
-
-
-
-	
+	$musee = new musee();
+	$data = $musee->museeFavoris();
 
 
 	$mustache_options =  array('extension' => EXT_MU_TPL);
@@ -14,6 +15,7 @@ if(isset($index)){
     ));
 
 	echo $m->render('favoris',
-			array("PRENOM" => $prenom));
+							array(
+							'LIST'=>$data));
 
 }

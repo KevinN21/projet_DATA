@@ -1,18 +1,12 @@
 <?php
 
-header('Content-Type: text/html; charset=utf-8');
+
 
 if(isset($index)){
 
 	$musee = new musee();
 
-	$id = $musee->myRandom();
-	$data = $musee->GetById($id);
-
-
-	$data['nom_musee'] = utf8_encode($data['nom_musee']);
-	$data['ville'] = utf8_encode($data['ville']);
-
+	$data = $musee->myRandom();
 
 	$mustache_options =  array('extension' => EXT_MU_TPL);
     $m = new Mustache_Engine(array(
