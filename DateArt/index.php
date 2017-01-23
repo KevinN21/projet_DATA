@@ -19,14 +19,20 @@
     <main class="container">
         <section class="row">
             <div class="col-md-12 text-center">
-                <img class="img-thumbnail" src="assets/img/louvre.jpg">
+                <img class="img-responsive" src="assets/img/louvre.jpg">
+            </div>
+            <div class="row">
+                <h1 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 nom-musee">MUSEE DU LOUVRE qui est beau</h1>
+            </div>
+            <div class="row">
+                <h2 class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ville-musee">Paname City</h2>
             </div>
         </section>
         <section class="row da-buttons">
-            <div class="col-xs-6 text-center">
+            <div class="col-xs-6 col-xs-push-1 text-center">
                 <button class="button1"><img class="red-cross" src="assets/img/red_cross.svg" alt=""></button>
             </div>
-            <div class="col-xs-6 text-center">
+            <div class="col-xs-6 col-xs-pull-1 text-center">
                 <button class="button2"><img class="green-heart" src="assets/img/green_heart.svg" alt=""></button>
             </div>
         </section>
