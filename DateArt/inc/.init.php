@@ -20,13 +20,13 @@ else{
     define('DB_USER', 'quentinp');
     define('DB_PASS', 'syUArx6xop');
     define('DB_DATA', 'quentinp');
-  	define('PREFIX_DB', 'MUSEE_');
+	define('PREFIX_DB', 'MUSEE_');
 
-  	define('PREFIX_PORTAL', 'projet_DATA');
-  	define('URL_PORTAL', 'http://www.kevinn.student.codeur.online/'.PREFIX_PORTAL.'/');
+	define('PREFIX_PORTAL', 'projet_DATA');
+	define('URL_PORTAL', 'http://www.kevinn.student.codeur.online/'.PREFIX_PORTAL.'/');
 
-  	define('FOLD_EMAIL', 'template/email/');
-  	define('FOLD_TEMPLATE', 'template');
+	define('FOLD_EMAIL', 'template/email/');
+	define('FOLD_TEMPLATE', 'template');
 
-  	define('EXT_MU_TPL', '.html');
+	define('EXT_MU_TPL', '.html');
 }
