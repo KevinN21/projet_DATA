@@ -18,8 +18,9 @@ function envoiBD($dbh,$test){
 
 		 $flickr = new Flickr('223e41af0d8f730f5535ea44be64af4b'); 
 		 $data = $flickr->getRandomPhoto($nomMusee); 
+		 
 
-		 $urlImage = $data[1]->source;
+		 $urlImage = $data[4]->source;
 
 		 $sqlupdate="UPDATE MUSEE SET image='".$urlImage."' WHERE id=".$id; 
 		 $sth=$dbh->prepare($sqlupdate);
