@@ -264,7 +264,6 @@ body {
     background-color: rgb(69, 168, 82);
 }
 
-
 /*END*/
 
 .red-cross {
@@ -277,11 +276,12 @@ body {
     height: 20vh;
 }
 
-/*.thumbnail img{
+.thumbnail img{
   width: 500px;
   height:500px;
   overflow:hidden;
-}*/
+}
+
 /*CONTACT CSS*/
 
 textarea {
@@ -315,4 +315,13 @@ textarea {
     font-size: 2rem;
     line-height: inherit;
     text-transform: uppercase;
+}
+
+.image{
+    position:relative;
+    overflow:hidden;
+    padding-bottom:100%;
+}
+.image img{
+    position:absolute;
 }
