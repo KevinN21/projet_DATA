@@ -283,3 +283,36 @@ body {
   overflow:hidden;
 }*/
 /*CONTACT CSS*/
+
+textarea {
+    resize: none;
+}
+
+#contact-form {
+    margin-top: 5%;
+}
+
+.form-control:focus {
+    border-color: #c1272d;
+    -webkit-box-shadow: 0px 0px 9px -1px rgba(193, 39, 45, 1);
+    -moz-box-shadow: 0px 0px 9px -1px rgba(193, 39, 45, 1);
+    box-shadow: 0px 0px 9px -1px rgba(193, 39, 45, 1);
+}
+
+.js-hide-label {
+    opacity: 0;
+}
+
+.js-unhighlight-label {
+    color: #999
+}
+
+.btn-start-order {
+    margin-top: 3%;
+    background: none;
+    border: solid 1px;
+    color: #2f323a;
+    font-size: 2rem;
+    line-height: inherit;
+    text-transform: uppercase;
+}
