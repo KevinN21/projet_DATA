@@ -4,29 +4,37 @@
 
   </main>
 
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/jquery-1.7.1.js"></script>
 <script>
 $(document).ready(function(){
-  $(".button2").on('click',function(){
-    console.log('coucou');
+  $(".button2").live('click',function(){
     var id = $(this).data('id');
-      $.ajax({
-        method: "POST",
-        url: "{{URL}}like/"+id+"/",
-        success: function(result){
-          var result = JSON.parse(result);
-          $('main').empty();
-          $('main').html(result);
-      }});
-  });
-  $(".button1").on('click',function(){
+      callAjax("like",id);
+    });
+
+$(".button1").live('click',function(){
     var id = $(this).data('id');
-      $.ajax({
-        method: "POST",
-        url: "{{URL}}dislike/"+id+"/",
-        success: function(result){
-          console.log('bjr');
-      }});
-  });
+      callAjax("dislike",id);
+    });
+
+
+$( ".button1" ).on( "swipeleft", dislike() );
+  function callAjax(url,id){
+        $.ajax({
+          type: "POST",
+          url: "{{URL}}"+url+"/"+id+"/",
+          success: function(result){
+            var result = JSON.parse(result);
+            $('main').empty();
+            $('main').html(result);
+        }
+    });
+  }
+
+
+
+
 });
+
+
 </script>
