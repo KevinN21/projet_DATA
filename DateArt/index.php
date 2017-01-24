@@ -35,7 +35,7 @@
 		require __DIR__ . '/inc/controler/musee.php';
 	}, 'musee');
 
-	$router->map('GET', '/contact/', function(){
+	$router->map('GET | POST', '/contact/', function(){
 		$index = true;
 		require __DIR__ . '/inc/controler/contact.php';
 	}, 'contact');
