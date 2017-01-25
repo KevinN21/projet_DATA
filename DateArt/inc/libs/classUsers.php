@@ -74,7 +74,7 @@ class user extends SQLpdo{
 				$insc = $this->insert("INSERT INTO ".$this->table." (nom, email, password, sessionActivation) VALUES(:nom, :email, :password, :activation)",
 						array(":nom" => $nom, ":email" => $email, ":password" => sha1($mdp), ':activation' => $activation));
 				
-				function_mail($email, "Activation de votre compte", "inscription.html", array("PSEUDO" => $nom, "URLACTIVATION" => URL_PORTAL."activation".$activation."/"));
+				function_mail($email, "Activation de votre compte", "activationcompte.html", array("PSEUDO" => $nom, "URLACTIVATION" => URL_PORTAL."activation".$activation."/"));
 					
 				$res = array('status' => true, 'content' => "L'inscription est effectué.<br/>Vous avez reçu un e-mail de confirmation<br/>"); //ok, l'inscription est OK
 			}
