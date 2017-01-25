@@ -205,26 +205,28 @@
 
 
 /*NORMAL CSS*/
-
 body {
     overflow-x: hidden;
     width: 100vw;
     height: 100vh;
+    background-color: #fff;
+}
+header{
+  margin-bottom: 1.4%;
 }
 
 .site-title {
-    margin-bottom: 5%;
-    margin-top: 3%;
+    margin-top: 2.4%;
     margin-left: 35%;
     width: 30vw;
     height: 10vh;
-}
+    }
 
 .tind-card {
     margin-top: 10%;
-    -webkit-box-shadow: 4px 4px 22px 0px rgba(0, 0, 0, 0.42);
-    -moz-box-shadow: 4px 4px 22px 0px rgba(0, 0, 0, 0.42);
-    box-shadow: 4px 4px 22px 0px rgba(0, 0, 0, 0.42);
+    -webkit-box-shadow: 4px 4px 22px 3px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 4px 4px 22px 3px rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 4px 22px 3px rgba(0, 0, 0, 0.6);
 }
 
 .button1 {
@@ -257,11 +259,11 @@ body {
 /*ACTIVE BUTTON*/
 
 .button1:active {
-    background-color: rgb(226, 70, 70);
+transform: translateY(4px);
 }
 
 .button2:active {
-    background-color: rgb(69, 168, 82);
+transform: translateY(4px);
 }
 
 
@@ -275,13 +277,31 @@ body {
 .green-heart {
     width: 30vw;
     height: 20vh;
+    border-radius: 100%;
+    background-color: transparent;
+}
+.thumbnail{
+max-height: 450px;
+min-height:450px;
 }
 
-/*.thumbnail img{
+.thumbnail img{
   width: 500px;
-  height:500px;
+  max-height: 370px;
+  min-height:370px;
   overflow:hidden;
-}*/
+}
+
+.caption h1{
+  font-size: 1.8rem;
+  font-variant: small-caps;
+}
+.caption h2{
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
 /*CONTACT CSS*/
 
 textarea {
@@ -309,7 +329,7 @@ textarea {
 
 .btn-start-order {
     margin-top: 3%;
-    background: none;
+    background: transparent;
     border: solid 1px;
     color: #2f323a;
     font-size: 2rem;
