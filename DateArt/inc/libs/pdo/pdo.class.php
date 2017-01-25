@@ -1,7 +1,7 @@
 <?php
 
 class SQLpdo {
-	function __CONSTRUCT($db=false, $login=false, $pass = false, $adress=false){
+	function __construct($db=false, $login=false, $pass = false, $adress=false){
 		$config['login']=($login) ? $login :DB_USER;
 		$config['mdp']= ($pass) ? $pass : DB_PASS;
 		$config['adress']=($adress) ? $adress :DB_HOST;

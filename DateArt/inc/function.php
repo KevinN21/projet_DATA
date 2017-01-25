@@ -21,3 +21,10 @@ function callTemplateReturn($file, $array = array()){
 
     return $m->render($file, $array);
 }
+
+function test_input($data) {
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	return $data;
+}

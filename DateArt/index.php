@@ -1,4 +1,3 @@
-
 <?php
 
 	require_once "inc/libs.php";
@@ -14,7 +13,7 @@
 		$index = true;
 		require __DIR__ . '/inc/controler/favoris.php';
 	}, 'favoris');
-
+	
 	$router->map('GET', '/favoris/[h:id]/', function($id){
 		$index = true;
 		require __DIR__ . '/inc/controler/favoris.php';
@@ -34,11 +33,32 @@
 		$index = true;
 		require __DIR__ . '/inc/controler/musee.php';
 	}, 'musee');
-
+	
 	$router->map('GET | POST', '/contact/', function(){
 		$index = true;
 		require __DIR__ . '/inc/controler/contact.php';
 	}, 'contact');
+	
+	
+	
+	/* -- utilisateur -- */
+	$router->map('GET | POST', '/connexion/', function(){
+		$index = true;
+		require __DIR__ . '/inc/controler/users/connexion.php';
+	}, 'connexion');
+	
+	$router->map('GET | POST', '/inscription/', function(){
+		$index = true;
+		require __DIR__ . '/inc/controler/users/inscription.php';
+	}, 'inscription');
+	
+	$router->map('GET', '/deconnexion/', function(){
+		$index = true;
+		require __DIR__ . '/inc/controler/users/deconnexion.php';
+	}, 'deconnexion');
+	
+	
+
 
 
 	$match = $router->match();

@@ -18,11 +18,10 @@ $(".button1").live('click',function(){
     });
 
 
-
   function callAjax(url,id){
         $.ajax({
           type: "POST",
-          url: "{{URL}}"+url+"/"+id+"/",
+          url: url+"/"+id+"/",
           success: function(result){
             var result = JSON.parse(result);
             $('main').empty();

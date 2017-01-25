@@ -10,6 +10,7 @@
   margin: 0;
   padding:0;
   box-sizing: border-box;
+  color:#a8a8a8;
 }
 body {
   width: 100vw;
@@ -17,7 +18,8 @@ body {
   overflow-x: hidden;
 }
 main {
-  margin-top: 5%;
+  margin-top: 5git status
+  %;
 }
 a:hover, a:visited, a:link, a:active
 {
