@@ -6,10 +6,10 @@ class SQLpdo {
 		$config['mdp']= ($pass) ? $pass : DB_PASS;
 		$config['adress']=($adress) ? $adress :DB_HOST;
 		$config['db']=($db) ? $db :DB_DATA;
-		
+
 
 		try {
-		    $this->db = new PDO('mysql:dbname='.$config['db'].';host='.$config['adress'].'', $config['login'], $config['mdp']);
+		    $this->db = new PDO('mysql:dbname='.$config['db'].';host='.$config['adress'].';charset=utf8', $config['login'], $config['mdp']);
 		} catch (PDOException $e) {
 		    echo 'Connexion échouée : ' . $e->getMessage();
 		}
@@ -27,13 +27,13 @@ class SQLpdo {
 	    $sth->execute($execute);//execute la requette sql
 	    return  $this->db->lastInsertId();// recupère toutes les données
 	}
-	
+
 	function update($sql, $execute=null){
 		$sth = $this->db->prepare($sql);//prepare SQL request
 	    return $sth->execute($execute);//execute la requette sql
 	}
-	
-	
+
+
 
 	function fetch($sql,$execute=null){
 		$sth = $this->db->prepare($sql);//prepare SQL request

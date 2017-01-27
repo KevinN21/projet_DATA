@@ -4,6 +4,7 @@
 
 <main>
   <section class="container">
+  {{#SHOW}}
     <article class="musee">
 	{{#LIST}}
       <figure>
@@ -15,5 +16,11 @@
       </figure>
 	  {{/LIST}}
     </article>
+	{{/SHOW}}
+	{{^SHOW}}
+		<article class="musee">
+			vous devez être connecté
+		</article>
+	{{/SHOW}}
   </section>
 </main>

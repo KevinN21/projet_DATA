@@ -60,27 +60,38 @@
 }
 
 .burger-font {
-    font-family: candara;
+    font-family: 'candara';
+    color:white;
+
 }
 
 .burger-choices1 {
-    font-size: 4rem;
+    background: #c1272d;
+    font-size: 3rem;
+    color:white;
+
 }
 
 .burger-choices2 {
-    font-size: 4rem;
+    background: #c1272d;
+    font-size: 3rem;
+    color:white;
+
 }
 
 .burger-choices3 {
-    font-size: 4rem;
+    background: #c1272d;
+    font-size: 3rem;
+    color:white;
 }
 
 .b-nav {
     width: 100vw;
     height: 100vh;
     position: absolute;
-    z-index: 11;
-    background-color: rgb(255, 255, 255);
+    z-index: 99;
+    background: #c1272d;
+    color:white;
 }
 
 .b-nav:not(.open) {
@@ -88,6 +99,7 @@
 }
 
 .b-nav li {
+    margin:-1%;
     color: #444444;
     list-style-type: none;
     text-align: left;
@@ -99,6 +111,7 @@
 
 .b-nav.open {
     visibility: visible;
+    position: fixed;
 }
 
 .b-nav.open li {
@@ -124,7 +137,7 @@
 }
 
 .b-menu {
-    background: rgb(255, 255, 255);
+    background: #c1272d;
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
@@ -139,28 +152,32 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    z-index: 12;
+    z-index: 100;
+    color:white;
 }
 
 .b-bun {
-    background: #444444;
+    background: #fff;
     position: relative;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
 
 .b-bun--top {
+    color:white;
     height: 2px;
     width: 35px;
 }
 
 .b-bun--mid {
+    color:white;
     height: 2px;
     top: 7px;
     width: 35px;
 }
 
 .b-bun--bottom {
+    color:white;
     height: 2px;
     top: 14px;
     width: 35px;
@@ -179,7 +196,7 @@
 }
 
 .b-container.open .b-bun--top {
-    background: #444444;
+    background: #fff;
     top: 9px;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -187,19 +204,19 @@
 
 .b-container.open .b-bun--mid {
     opacity: 0;
+
 }
 
 .b-container.open .b-bun--bottom {
-    background: #444444;
+    background: #fff;
     top: 5px;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
 
 .b-container.open .b-brand {
-    color: #444444;
+    color: #fff;
 }
-
 
 /*END*/
 
@@ -209,15 +226,16 @@ body {
     overflow-x: hidden;
     width: 100vw;
     height: 100vh;
-    background-color: #fff;
+    background-color: #eee;
 }
 header{
-  margin-bottom: 1.4%;
+  margin-bottom: 4%;
+  background-color: #c1272d;
 }
 
 .site-title {
-    margin-top: 2.4%;
     margin-left: 35%;
+    margin-bottom:1%;
     width: 30vw;
     height: 10vh;
     }
@@ -277,26 +295,29 @@ transform: translateY(4px);
 .green-heart {
     width: 30vw;
     height: 20vh;
-    border-radius: 100%;
-    background-color: transparent;
 }
+
 .thumbnail{
-max-height: 450px;
-min-height:450px;
+    max-height: 450px;
+    min-height:450px;
+    background-color: #c1272d;
 }
 
 .thumbnail img{
   width: 500px;
-  max-height: 370px;
-  min-height:370px;
+  max-height: 340px;
+  min-height:340px;
   overflow:hidden;
+
 }
 
 .caption h1{
   font-size: 1.8rem;
   font-variant: small-caps;
+  color:#fff;
 }
 .caption h2{
+  color:#fff;
   font-size: 1.1rem;
   text-transform: uppercase;
   font-weight: lighter;
@@ -335,4 +356,75 @@ textarea {
     font-size: 2rem;
     line-height: inherit;
     text-transform: uppercase;
+}
+/* Header connexion pop up */
+  .btn-header-connexion{
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    width: 50px;
+    height: 50px;
+    background-color: #c1272d;
+    border-radius: 50px;
+    text-align: center;
+    padding: 0.5em;
+    color: white;
+    cursor: pointer;
+    z-index: 101;
+  }
+  .btn-header-connexion span{
+    font-size: 2em;
+    color: white;
+  }
+
+  #header-connexion{
+    position: absolute;
+    display: none;
+    width: 40%;
+    padding: 1em;
+    background-color: #c1272d;
+    margin-top:2.4%;
+    z-index: 100;
+    right: 0;
+    top: 9%;
+  }
+
+  .btn-header-connexion-content:active #header-connexion,
+  .btn-header-connexion-content:hover #header-connexion,
+  .btn-header-connexion-content:active #header-connexion{
+    display: block;
+  }
+
+  @media screen and (max-width: 640px) {
+    #header-connexion{
+      width: 100%;
+    }
+  }
+/* Carousel */
+.carousel-control{
+  width: 0;
+  color:#c1272d;
+}
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .glyphicon-chevron-left,{
+  color:#c1272d;
+}
+.carousel-indicators li {
+  background-color: #fff;
+}
+
+.carousel-indicators .active {
+background:#c1272d;
+}
+.da-buttons-connex{
+  margin-top: 5%;
+}
+.da-buttons-connex button{
+  margin-top: 1%;
+}
+.inscrivez {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 45px;
 }

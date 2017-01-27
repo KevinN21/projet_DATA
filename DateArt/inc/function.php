@@ -6,7 +6,14 @@ function callTemplate($file, $array = array()){
           'loader' => new Mustache_Loader_FilesystemLoader(FOLD_TEMPLATE, $mustache_options),
       ));
 
-      $array = array_merge($array, array('URL' => URL_PORTAL));
+	$user = new user();
+	$c = $user->userConnected();
+	$connected = false;
+	if($c['id'] > 0){
+		$connected = true;
+	}
+	
+      $array = array_merge($array, array('URL' => URL_PORTAL, 'USER_CONNECT' => $connected));
 
     echo $m->render($file, $array);
 }
@@ -16,8 +23,15 @@ function callTemplateReturn($file, $array = array()){
       $m = new Mustache_Engine(array(
           'loader' => new Mustache_Loader_FilesystemLoader(FOLD_TEMPLATE, $mustache_options),
       ));
-
-      $array = array_merge($array, array('URL' => URL_PORTAL));
+	  
+	$user = new user();
+	$c = $user->userConnected();
+	$connected = false;
+	if($c['id'] > 0){
+		$connected = true;
+	}
+	
+	$array = array_merge($array, array('URL' => URL_PORTAL, 'USER_CONNECT' => $connected));
 
     return $m->render($file, $array);
 }

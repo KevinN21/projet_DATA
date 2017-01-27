@@ -1,15 +1,17 @@
 <?php
 
 if(isset($index)){
-	$user = 1;
+	$user = new user();
+	if($u = $user->userConnected()){
+	
+		$musee = new musee();
 
-	$musee = new musee();
+		//si l'utilisateur n'a pas encore like
+		if(!$musee->userFavExist($id, $u['id'])){
+			$musee->like($id, $u['id']);
+		}
 
-	//si l'utilisateur n'a pas encore like
-	if(!$musee->userFavExist($id, $user)){
-		$musee->like($id, $user);
+		$data = $musee->myRandom();
+		echo json_encode(callTemplateReturn('museelike', $data));
 	}
-
-	$data = $musee->myRandom();
-	echo json_encode(callTemplateReturn('museelike', $data));
 }

@@ -14,6 +14,7 @@ if($_SERVER['REMOTE_ADDR'] == "127.0.0.1"){
 	define('FOLD_TEMPLATE', 'template');
 
 	define('EXT_MU_TPL', '.html');
+	define('CUSTOM_KEY_MDP', 'f6dcade5c83aaed162b7ddd44ff5effef76b6f1a');
 }
 else{
     define('DB_HOST', 'localhost');
@@ -25,8 +26,9 @@ else{
 	define('PREFIX_PORTAL', 'projet_DATA');
 	define('URL_PORTAL', 'http://www.kevinn.student.codeur.online/'.PREFIX_PORTAL.'/');
 
-	define('FOLD_EMAIL', 'template/email/');
+	define('FOLD_EMAIL', 'template/mail/');
 	define('FOLD_TEMPLATE', 'template');
 
 	define('EXT_MU_TPL', '.html');
+	define('CUSTOM_KEY_MDP', ''); //f6dcade5c83aaed162b7ddd44ff5effef76b6f1a
 }
