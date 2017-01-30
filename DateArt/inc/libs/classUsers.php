@@ -44,7 +44,7 @@ class user extends SQLpdo{
 
 					$_SESSION['idUser'] = $res['id'];
 
-					return array('status' => true, 'content' => 'Vous êtes connecté !');
+					return array('status' => 1, 'content' => 'Vous êtes connecté !');
 				}
 				else{
 					return array('status' => -3, 'content' => 'Le compte est inactif'); // compte inactif

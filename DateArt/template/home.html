@@ -18,7 +18,6 @@
 				});
 
 
-				$( ".button1" ).on( "swipeleft", dislike() );
 				function callAjax(url,id){
 				$.ajax({
 					type: "POST",
@@ -31,6 +30,17 @@
 				});
 				}
 			});
+			$(".thumbnail").live("swipeleft",function(){
+						var id = $(this).data('id');
+						callAjax("dislike",id);
+
+			 });
+
+			 $(".thumbnail").live("swiperight",function(){
+						var id = $(this).data('id');
+						callAjax("like",id);
+
+			 });
 		</script>
 	{{/SHOW}}
 	{{^SHOW}}
@@ -61,25 +71,25 @@
     <div class="carousel-inner" role="listbox">
 
       <div class="item active">
-        <img src="{{URL}}assets/img/descript1.png" alt="Likez le musée qui vous intéresse !" width="460" height="345">
+        <img src="{{URL}}assets/img/descript1.jpg" alt="Likez le musée qui vous intéresse !">
         <div class="carousel-caption">
         </div>
       </div>
 
       <div class="item">
-        <img src="{{URL}}assets/img/descript2.jpg" alt="Likez" width="460" height="345">
+        <img src="{{URL}}assets/img/descript2.jpg" alt="Likez ou ignorez !">
         <div class="carousel-caption">
         </div>
       </div>
 
       <div class="item">
-        <img src="{{URL}}assets/img/descript4.png" alt="Flower" width="460" height="345">
+        <img src="{{URL}}assets/img/descript3.jpg" alt="Liste de vos favoris">
         <div class="carousel-caption">
         </div>
       </div>
 
       <div class="item">
-        <img src="{{URL}}assets/img/descript5.png" alt="Flower" width="460" height="345">
+        <img src="{{URL}}assets/img/descript4.jpg" alt="Fiche détail musée">
         <div class="carousel-caption">
         </div>
       </div>

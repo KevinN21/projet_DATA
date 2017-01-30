@@ -8,6 +8,10 @@
     src: url(../fonts/candara.ttf);
 }
 
+@font-face {
+    font-family: lithos;
+    src: url(../fonts/LithosPro-Regular.otf);
+}
 
 /*BURGER MENU CSS*/
 
@@ -247,19 +251,7 @@ header{
     box-shadow: 4px 4px 22px 3px rgba(0, 0, 0, 0.6);
 }
 
-.button1 {
-    border-radius: 50px;
-    background: transparent;
-    border-color: transparent;
-    outline: 0;
-}
 
-.button2 {
-    border-radius: 50px;
-    background: transparent;
-    border-color: transparent;
-    outline: 0;
-}
 
 .nom-musee {
     margin-top: 0;
@@ -273,19 +265,13 @@ header{
     text-align: center;
 }
 
-
-/*ACTIVE BUTTON*/
-
-.button1:active {
-transform: translateY(4px);
-}
-
-.button2:active {
-transform: translateY(4px);
-}
+.hidden-md-up{}
 
 
 /*END*/
+.da-buttons{
+
+}
 
 .red-cross {
     width: 30vw;
@@ -297,32 +283,80 @@ transform: translateY(4px);
     height: 20vh;
 }
 
-.thumbnail{
-    max-height: 450px;
-    min-height:450px;
-    background-color: #c1272d;
+
+.button1, .button2, .button3 {
+    border-radius: 50px;
+    background: transparent;
+    border-color: transparent;
+    outline: 0;
 }
 
-.thumbnail img{
-  width: 500px;
-  max-height: 340px;
-  min-height:340px;
-  overflow:hidden;
 
+/*ACTIVE BUTTON*/
+
+.button1:active, .button2:active,.button3:active {
+transform: translateY(4px);
 }
 
-.caption h1{
-  font-size: 1.8rem;
-  font-variant: small-caps;
-  color:#fff;
-}
-.caption h2{
-  color:#fff;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  font-weight: lighter;
+/* thumbnail */
+.thumbnail {
+    max-height: 470px;
+    min-height: 470px;
+    background-color: transparent;
+    border: none;
 }
 
+.thumbnail img {
+    width: 400px;
+    max-height: 400px;
+    min-height: 400px;
+    overflow: hidden;
+    border: none;
+}
+
+.caption h1 {
+    font-size: 2rem;
+    font-variant: small-caps;
+    color: #c1272d;
+    font-family: lithos;
+}
+
+.caption h2 {
+    color: #c1272d;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: lithos;
+}
+
+@media screen and (max-width: 650px) {
+    .thumbnail {
+        max-height: 310px;
+        min-height: 310px;
+        background-color: transparent;
+        border: none;
+    }
+    .thumbnail img {
+        width: 230px;
+        max-height: 250px;
+        min-height: 250px;
+        overflow: hidden;
+    }
+    .caption h1 {
+        font-size: 1.5rem;
+    }
+    .caption h2 {
+        font-size: 1.2rem;
+    }
+}
+@font-face {
+    font-family: lithos;
+    src: url(../fonts/LithosPro-Regular.otf);
+}
+figcaption p {
+    font-family: lithos;
+    font-size: 2em;
+}
 /*CONTACT CSS*/
 
 textarea {
@@ -364,7 +398,7 @@ textarea {
     top: 2%;
     width: 50px;
     height: 50px;
-    background-color: #c1272d;
+    background-color: none;
     border-radius: 50px;
     text-align: center;
     padding: 0.5em;
@@ -389,11 +423,7 @@ textarea {
     top: 9%;
   }
 
-  .btn-header-connexion-content:active #header-connexion,
-  .btn-header-connexion-content:hover #header-connexion,
-  .btn-header-connexion-content:active #header-connexion{
-    display: block;
-  }
+
 
   @media screen and (max-width: 640px) {
     #header-connexion{

@@ -132,5 +132,18 @@
 			</div>
 		{{/USER_CONNECT}}
     </div>
+	
+	<script>
+		$(document).ready(function(){
+			$('.btn-header-connexion').click(function(){
+				if($('#header-connexion').css('display') == 'none'){
+					$('#header-connexion').show();
+				}
+				else{
+					$('#header-connexion').hide();
+				}
+			});
+		});
+	</script>
 
 </header>

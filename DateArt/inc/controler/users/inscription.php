@@ -1,9 +1,9 @@
 <?php
 
 if(isset($index)){
-	
+
 	$user = new user();
-	
+
 	if(!$user->userConnected()){
 		if(isset($_REQUEST['inscription'])){
 			$res = $user->userRegister();
@@ -14,8 +14,8 @@ if(isset($index)){
 		}
 	}
 	else{
-		$res = array('SHOW' => false, 'content' => 'Vous êtes connecté');
+		$res = array('SHOW' => false, 'content' => 'Vous êtes connecté.');
 	}
-	
+
 	callTemplate("users/inscription", $res);
 }

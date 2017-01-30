@@ -7,7 +7,8 @@ if(isset($index)){
 	if(!$user->userConnected()){
 		if(isset($_REQUEST['connexion'])){
 			$res = $user->userConnexion();
-			$res = array_merge($res, array('SHOW' => true));
+			if($res['status'] <= -1){ $ok = false; } else{ $ok = true; }
+			$res = array_merge($res, array('SHOW' => true, 'OK' => $ok, 'REFRESH' => $ok));
 		}
 		else{
 			$res = array('SHOW' => true);

@@ -3,10 +3,18 @@
 <main>
 {{#SHOW}}
 	{{#status}}
+
+		{{#REFRESH}}
+			<meta http-equiv="refresh" content="1; URL={{URL}}">
+		{{/REFRESH}}
+			<div class="alert
+			{{#OK}}alert-success{{/OK}}
+			{{^OK}}alert-warning{{/OK}}" role="alert">
 		{{content}}
-    <meta http-equiv="refresh" content="1; URL={{URL}}">
 	{{/status}}
-<form class="form-horizontal">
+	</div>
+{{^OK}}
+<form class="form-horizontal" method="post">
   <div class="form-group">
    		<label class="col-md-4 col-xs-11 col-xs-push-1 col-lg-2 col-push-2 control-label" for="Pseudo">Email</label>
                 <div class="col-md-6 col-xs-10 col-xs-offset-1">
@@ -25,6 +33,7 @@
     </div>
   </div>
 </form>
+{{/OK}}
 {{/SHOW}}
 {{^SHOW}}
 	{{content}} <a href="{{URL}}deconnexion/">Déconnexion</a>
