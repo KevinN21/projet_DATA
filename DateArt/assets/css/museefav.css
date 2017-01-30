@@ -1,10 +1,11 @@
 @font-face {
+    font-family: "lithos";
+    src: url(../fonts/LithosPro-Regular.otf);
+}
+
+@font-face {
   font-family: "candara";
   src: url('../fonts/candara.ttf');
-}
-@font-face {
-  font-family: "castellar.ttf";
-  src: url('../fonts/castellar.ttf');
 }
 *{
   margin: 0;
@@ -26,7 +27,7 @@ a:hover, a:visited, a:link, a:active
     text-decoration: none;
 }
 .details h2{
-  font-family: "castellar";
+  font-family: "lithos";
   color:#c1272d;
 }
 .details p{

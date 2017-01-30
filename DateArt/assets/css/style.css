@@ -1,15 +1,15 @@
 @font-face {
-    font-family: harlow;
+    font-family: "harlow";
     src: url(../fonts/harlow.ttf);
 }
 
 @font-face {
-    font-family: candara;
+    font-family: "candara";
     src: url(../fonts/candara.ttf);
 }
 
 @font-face {
-    font-family: lithos;
+    font-family: "lithos";
     src: url(../fonts/LithosPro-Regular.otf);
 }
 
@@ -229,21 +229,27 @@
 body {
     overflow-x: hidden;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     background-color: #eee;
 }
+
 header{
-  margin-bottom: 4%;
+  margin-bottom: 2%;
   background-color: #c1272d;
 }
 
 .site-title {
-    margin-left: 35%;
-    margin-bottom:1%;
-    width: 30vw;
-    height: 10vh;
-    }
-
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.7%;
+    width: 25vw;
+    height: 9vh;
+}
+.header-icons {
+    margin-top: 1%;
+    width: 32px;
+}
 .tind-card {
     margin-top: 10%;
     -webkit-box-shadow: 4px 4px 22px 3px rgba(0, 0, 0, 0.6);
@@ -251,7 +257,10 @@ header{
     box-shadow: 4px 4px 22px 3px rgba(0, 0, 0, 0.6);
 }
 
-
+#france {
+    margin-top: 23%;
+    width: 32px;
+}
 
 .nom-musee {
     margin-top: 0;
@@ -265,24 +274,36 @@ header{
     text-align: center;
 }
 
-.hidden-md-up{}
-
-
 /*END*/
+
 .da-buttons{
-
+  position: fixed;
+  margin-right: 0;
+  margin-left: 0;
+}
+.green-heart, .red-cross, .yellow-star
+{
+  width: 100%;
 }
 
-.red-cross {
-    width: 30vw;
-    height: 20vh;
+@media screen and (max-width: 650px) {
+  .da-buttons{
+    position: fixed;
+    margin-right: 0;
+    margin-left: 0;
+    bottom: 0;
+  }
+   .yellow-star{
+     width: 80%;
+   }
+  .green-heart, .red-cross,
+  {
+  width:100%;
 }
-
-.green-heart {
-    width: 30vw;
-    height: 20vh;
+  .descrip{
+    display:none;
+  }
 }
-
 
 .button1, .button2, .button3 {
     border-radius: 50px;
@@ -300,14 +321,14 @@ transform: translateY(4px);
 
 /* thumbnail */
 .thumbnail {
-    max-height: 470px;
-    min-height: 470px;
+    max-height: 490px;
+    min-height: 490px;
     background-color: transparent;
     border: none;
 }
 
 .thumbnail img {
-    width: 400px;
+    width: 370px;
     max-height: 400px;
     min-height: 400px;
     overflow: hidden;
@@ -331,15 +352,15 @@ transform: translateY(4px);
 
 @media screen and (max-width: 650px) {
     .thumbnail {
-        max-height: 310px;
-        min-height: 310px;
+        max-height: 370px;
+        min-height: 370px;
         background-color: transparent;
         border: none;
     }
     .thumbnail img {
         width: 230px;
-        max-height: 250px;
-        min-height: 250px;
+        max-height: 300px;
+        min-height: 300px;
         overflow: hidden;
     }
     .caption h1 {
@@ -349,12 +370,9 @@ transform: translateY(4px);
         font-size: 1.2rem;
     }
 }
-@font-face {
-    font-family: lithos;
-    src: url(../fonts/LithosPro-Regular.otf);
-}
+
 figcaption p {
-    font-family: lithos;
+    font-family: "lithos";
     font-size: 2em;
 }
 /*CONTACT CSS*/

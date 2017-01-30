@@ -6,9 +6,17 @@ class musee extends SQLpdo{
 		 parent::__construct();
 	}
 
-	function myRandom(){
-		$sql="SELECT * FROM MUSEE ORDER BY rand() LIMIT 1";
-		$data = $this->fetch($sql);
+	function myRandom($v = null){
+		$array = null;
+		$req = "";
+		$val = null;
+		if(!is_null($v)){
+			$req = "WHERE nom_region_new LIKE :nom_region_new";
+			$val = array(":nom_region_new" => "".$v."");
+		}
+		
+		$sql="SELECT * FROM MUSEE ".$req." ORDER BY rand() LIMIT 1";
+		$data = $this->fetch($sql, $val);
 
 		return $data;
 	}

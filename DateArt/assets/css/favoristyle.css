@@ -1,7 +1,8 @@
 @font-face {
-  font-family: "Castellar";
-  src: url('../fonts/castellar.ttf');
+    font-family: "lithos";
+    src: url(../fonts/LithosPro-Regular.otf);
 }
+
 
 *{
   margin: 0;
@@ -11,12 +12,17 @@
 main{
   margin-top: 5%;
 }
+figcaption{
+  margin:1%;
+}
 figcaption img {
   width: 100%;
+  max-height: 450px;
+  min-height: 450px;
 }
 figcaption p{
-  font-family: "Castellar";
-  font-size: 2em;
+  font-family: "lithos";
+  font-size: 1.4em;
 }
 a, a:hover, a:visited, a:active, a:focus{
   text-decoration: none;
