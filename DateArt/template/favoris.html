@@ -7,11 +7,11 @@
   {{#SHOW}}
     <article class="musee">
 	{{#LIST}}
-      <figure class="container">
-          <figcaption class="col-xs-12 col-md-3">
+      <figure>
+          <figcaption class="col-xs-12 col-md-4">
             <a href="{{URL}}musee/{{id_musee}}/">
+              <p>{{nom_musee}}</p></a>
             <img src="{{image}}" alt="Photo de musée">
-            <p>{{nom_musee}}</p></a>
           </figcaption>
       </figure>
 	  {{/LIST}}

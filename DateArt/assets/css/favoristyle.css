@@ -12,17 +12,21 @@
 main{
   margin-top: 5%;
 }
+figure{
+  margin-bottom: 4%;
+}
 figcaption{
-  margin:1%;
+  margin:0%;
+  padding:0;
 }
 figcaption img {
-  width: 100%;
+  width: 90%;
   max-height: 450px;
   min-height: 450px;
 }
 figcaption p{
   font-family: "lithos";
-  font-size: 1.4em;
+  font-size: 1em;
 }
 a, a:hover, a:visited, a:active, a:focus{
   text-decoration: none;
