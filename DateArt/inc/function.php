@@ -1,5 +1,17 @@
 <?php
 
+/**
+     * Call Mustach with file html and array content
+     * 
+	 * @param string 	$file	the file of html template
+     * @param array		$array 	the array content for template
+     * 
+     * @return string  	Returns an echo of template html
+     * 
+     * @access public
+     *  
+     */
+	 
 function callTemplate($file, $array = array()){
     $mustache_options =  array('extension' => EXT_MU_TPL);
       $m = new Mustache_Engine(array(
@@ -17,6 +29,18 @@ function callTemplate($file, $array = array()){
 
     echo $m->render($file, $array);
 }
+
+/**
+     * Call Mustach with file html and array content
+     * 
+	 * @param string 	$file	name file html 
+     * @param array		$array 	the array content for template
+     * 
+     * @return string  	Returns an string of template html
+     * 
+     * @access public
+     * 
+     */
 
 function callTemplateReturn($file, $array = array()){
     $mustache_options =  array('extension' => EXT_MU_TPL);
@@ -36,12 +60,36 @@ function callTemplateReturn($file, $array = array()){
     return $m->render($file, $array);
 }
 
+/**
+     * Call a battery test for entry of user
+     * 
+	 * @param string 	$data	entry of user
+	 * 
+     * @return string  	Returns a string clean
+     * 
+     * @access public
+     * 
+     */
+
 function test_input($data) {
 	$data = trim($data);
 	$data = stripslashes($data);
 	$data = htmlspecialchars($data);
 	return $data;
 }
+
+/**
+     * Send a e-mail to user
+     * 
+	 * @param string 	$mail		e-mail of user
+	 * @param string 	$sujet		object e-mail
+	 * @param string 	$fichier	file template html for e-mail
+	 * @param array 	$var		array content key and value replace in template html
+	 * 
+     * 
+     * @access public
+     * 
+     */
 
 function function_mail($mail, $sujet, $fichier, $var){
 

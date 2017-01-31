@@ -39,6 +39,11 @@ $router->map('GET | POST', '/contact/', function(){
 	require __DIR__ . '/inc/controler/contact.php';
 }, 'contact');
 
+$router->map('GET | POST', '/apropos/', function(){
+	$index = true;
+	require __DIR__ . '/inc/controler/apropos.php';
+}, 'apropos');
+
 
 
 /* -- utilisateur -- */

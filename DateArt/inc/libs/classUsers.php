@@ -4,8 +4,17 @@ class user extends SQLpdo{
 
 	function __construct(){
 		$this->table = "MUSEE_USER";
-		parent::__construct();
+		parent::__construct(); 
 	}
+	
+	/**
+     * Call userConnected, verify if user is connected with a cookie 
+     * 
+     * @return booleen 	Returns true/false ~ status
+     * 
+     * @access public
+     * 
+     */
 
 	function userConnected(){
 		(isset($_COOKIE['keySession'])) ? $id = $_COOKIE['keySession'] : $id = false;

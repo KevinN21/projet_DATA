@@ -10,8 +10,15 @@ if(isset($index)){
 		if(!$musee->userFavExist($id, $u['id'])){
 			$musee->like($id, $u['id']);
 		}
+		
+		if(isset($_COOKIE['region'])){
+			$cookie = $_COOKIE['region'];
+		}
+		else{
+			$cookie = null;
+		}
 
-		$data = $musee->myRandom();
+		$data = $musee->myRandom($cookie);
 		$pos=explode(" ", $data["coordonnees"]);
 		$data['positionx']=$pos[0];
 		$data['positiony']=$pos[1];

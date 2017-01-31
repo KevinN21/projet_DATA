@@ -63,6 +63,19 @@
     }
 }
 
+/* svg */
+svg{
+	height: 100%
+}
+
+svg .land:hover{
+	fill: rgba(0, 0, 0, 0.1);
+}
+
+#FR-G{
+	transform: translateX(-50px);
+}
+
 .burger-font {
     font-family: 'candara';
     color:white;
@@ -138,6 +151,11 @@
     font-family: candara;
     font-weight: 300;
     text-decoration: none;
+    paddgin-top: 1em;
+}
+
+.b-link img{
+   padding-top: 1em;
 }
 
 .b-menu {
@@ -258,7 +276,7 @@ header{
 }
 
 #france {
-    margin-top: 23%;
+    padding-top: 1em;
     width: 32px;
 }
 
