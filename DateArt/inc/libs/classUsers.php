@@ -4,16 +4,16 @@ class user extends SQLpdo{
 
 	function __construct(){
 		$this->table = "MUSEE_USER";
-		parent::__construct(); 
+		parent::__construct();
 	}
-	
+
 	/**
-     * Call userConnected, verify if user is connected with a cookie 
-     * 
+     * Vérifie que le cookie keySession existe et vérifie en BDD que la clé existe et que l'utilisateur est connecté
+     *
      * @return booleen 	Returns true/false ~ status
-     * 
+     *
      * @access public
-     * 
+     *
      */
 
 	function userConnected(){
@@ -32,7 +32,14 @@ class user extends SQLpdo{
 		}
 	}
 
-	//on connecte l'utilisateur
+	/**
+     * Connecte l'utilisateur à la BDD grace aux données du $_REQUEST
+     *
+     * @return array 	retourne un tableau contenant un status, et un message d'information
+     *
+     * @access public
+     *
+     */
 	function userConnexion(){
 		$email = test_input($_REQUEST['connexionEmail']);
 		$mdp = test_input($_REQUEST['connexionMDP']);
@@ -68,7 +75,14 @@ class user extends SQLpdo{
 		}
 	}
 
-	//on inscrit l'utilsiateur
+	/**
+     * Inscrit l'utilisateur à la BDD grace aux données du $_REQUEST
+     *
+     * @return array 	retourne un tableau contenant un status, et un message d'information
+     *
+     * @access public
+     *
+     */
 	function userRegister(){
 		$email = test_input($_REQUEST['insc_email']);
 		$mdp = test_input($_REQUEST['insc_password']);
@@ -76,7 +90,7 @@ class user extends SQLpdo{
 
 		if($email && $mdp && $nom){
 			if($res = $this->fetch("SELECT id FROM ".$this->table." WHERE email = :email", array(":email" => $email))){
-				$res = array('status' => -1, 'content' => "L'email existe déjà"); //email existe d�j�
+				$res = array('status' => -1, 'OK' => false, 'content' => "L'email existe déjà"); //email existe d�j�
 			}
 			else{
 				$activation = sha1($email.time());
@@ -85,16 +99,26 @@ class user extends SQLpdo{
 
 				function_mail($email, "Activation de votre compte", "activationcompte.html", array("PSEUDO" => $nom, "URLACTIVATION" => URL_PORTAL."activation/".$activation."/"));
 
-				$res = array('status' => true, 'content' => "L'inscription est effectué.<br/>Vous avez reçu un e-mail de confirmation<br/>"); //ok, l'inscription est OK
+				$res = array('status' => true, 'OK' => true, 'content' => "L'inscription est effectué.<br/>Vous avez reçu un e-mail de confirmation<br/>"); //ok, l'inscription est OK
 			}
 		}
 		else{
-			$res = array('status' => -2, 'content' => "Remplissez tous les champs"); //champ vide
+			$res = array('status' => -2, 'OK' => false, 'content' => "Remplissez tous les champs"); //champ vide
 		}
 
 		return $res;
 	}
 
+	/**
+     * Permet l'activation du compte grace à la clé fournis par e-mail
+     *
+	 * @param string 	$activation		clé d'activation
+     *
+	 * @return array 	retourne un tableau contenant un status, et un message d'information
+     *
+     * @access public
+     *
+     */
 	function userActivation($activation = null){
 		if($activation){
 			if($req = $this->fetch("SELECT id FROM ".$this->table." WHERE status = 0 AND sessionActivation = :key", array(":key" => $activation))){
@@ -113,6 +137,11 @@ class user extends SQLpdo{
 		}
 	}
 
+	/**
+	 *
+     * Déconnecte l'utilisateur en détruisant le cookie permettant la connexion automatique
+	 *
+     */
 	function userDeconnexion(){
 		setcookie('keySession', "", time(), "/");
 	}

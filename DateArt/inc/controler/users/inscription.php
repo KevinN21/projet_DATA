@@ -7,7 +7,8 @@ if(isset($index)){
 	if(!$user->userConnected()){
 		if(isset($_REQUEST['inscription'])){
 			$res = $user->userRegister();
-			$res = array_merge($res, array('SHOW' => true));
+			(!$res['OK']) ? $show = true : $show = false;
+			$res = array_merge($res, array('SHOW' => $show));
 		}
 		else{
 			$res = array('SHOW' => true);
