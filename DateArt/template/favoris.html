@@ -5,13 +5,15 @@
 <main>
   <section class="container">
   {{#SHOW}}
-    <article class="musee">
+    <article class="musee row-mas">
 	{{#LIST}}
       <figure>
-          <figcaption class="col-xs-12 col-md-4">
+          <figcaption class="col-xs-12 col-md-4" style="width: 100%">
             <a href="{{URL}}musee/{{id_musee}}/">
               <p>{{nom_musee}}</p>
-            <img src="{{image}}" alt="Photo de musée">
+              <div class="center-cropped">
+                  <img src="{{image}}" alt="Photo de musée">
+              </div>
           </a>
           </figcaption>
       </figure>
@@ -25,3 +27,4 @@
 	{{/SHOW}}
   </section>
 </main>
+{{>truefooter}}

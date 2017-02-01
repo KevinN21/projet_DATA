@@ -1,36 +1,39 @@
-{{>header}} {{#SHOW}} {{#MAP}}
-<script src="assets/js/snap.svg-min.js"></script>
+{{>header}}
+{{#SHOW}}
+	{{#MAP}}
+	<script src="assets/js/snap.svg-min.js"></script>
 
-<svg id='demo' width='100%' height='100vh' viewBox="0 0 600 600">>
+	<svg id='demo' width='100%' height='100vh' viewBox="0 0 600 600">>
 
-			</svg>
-<script>
-	console.log('ok');
-	var s = Snap("#demo");
+				</svg>
+	<script>
+		console.log('ok');
+		var s = Snap("#demo");
 
-	Snap.load("assets/svg/france.svg", onSVGLoaded); //chargement du SVG
-	function onSVGLoaded(data) {
-		var star = data.selectAll('.land'); // étoile du SVG
-		console.log(star);
-		star.forEach(function(elem, i) {
+		Snap.load("assets/svg/france.svg", onSVGLoaded); //chargement du SVG
+		function onSVGLoaded(data) {
+			var star = data.selectAll('.land'); // étoile du SVG
+			console.log(star);
+			star.forEach(function(elem, i) {
 
-			elem.click(function() {
-				var reg = elem.attr('data-id');
-				setCookie('region', reg, 3);
-				this.animate({
-					fill: 'red'
+				elem.click(function() {
+					var reg = elem.attr('data-id');
+					setCookie('region', reg, 3);
+					this.animate({
+						fill: 'red'
+					});
+					window.location.replace('{{URL}}');
 				});
-				window.location.replace('{{URL}}');
+
 			});
 
-		});
-
-		s.append(data); // ajout du svg chargé
-		var grabLink = Snap.select('main .land');
-		console.log(grabLink);
-	}
-</script>
-{{/MAP}} {{^MAP}}
+			s.append(data); // ajout du svg chargé
+			var grabLink = Snap.select('main .land');
+			console.log(grabLink);
+		}
+	</script>
+	{{/MAP}}
+{{^MAP}}
 <main class="container">
 	{{>museelike}}
 </main>
@@ -65,18 +68,19 @@
 	});
 
 </script>
-{{/MAP}} {{/SHOW}} {{^SHOW}}
+{{/MAP}}
+{{/SHOW}}
+
+{{^SHOW}}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 	.carousel-inner>.item>img,
 	.carousel-inner>.item>a>img {
-		width: 70%;
-		height:100vh;
+		height:60vh;
 		margin: auto;
 	}
 </style>
-</head>
 
 <main class="container">
 
@@ -94,7 +98,7 @@
 			<div class="carousel-inner" role="listbox">
 
 				<div class="item active">
-					<img src="{{URL}}assets/img/descript1.jgp" alt="Likez le musée qui vous intéresse !">
+					<img src="{{URL}}assets/img/descript1.jpg" alt="Likez le musée qui vous intéresse !">
 					<div class="carousel-caption">
 					</div>
 				</div>
@@ -106,13 +110,13 @@
 				</div>
 
 				<div class="item">
-					<img src="{{URL}}assets/img/descript3.jgp" alt="Liste de vos favoris">
+					<img src="{{URL}}assets/img/descript3.jpg" alt="Liste de vos favoris">
 					<div class="carousel-caption">
 					</div>
 				</div>
 
 				<div class="item">
-					<img src="{{URL}}assets/img/descript4.jgp" alt="Fiche détail musée">
+					<img src="{{URL}}assets/img/descript4.jpg" alt="Fiche détail musée">
 					<div class="carousel-caption">
 					</div>
 				</div>
@@ -132,13 +136,11 @@
 	</div>
 	<article class="container da-buttons-connex">
 		<div class="row">
-			<a href="{{URL}}connexion/"><button type="button" class="btn btn-primary center-block" name="button">Connexion</button></a>
-		</div>
-		<div class="row">
-			<a href="{{URL}}inscription/"><button type="button" class="btn btn-success center-block" name="button">Inscription</button>
+			<a href="{{URL}}connexion/"><button type="button" class="btn btn-start-order" name="button">Connexion</button></a>
+			<a href="{{URL}}inscription/"><button type="button" class="btn btn-start-order" name="button">Inscription</button>
 		</div>
 	</article>
 </main>
 
 	{{/SHOW}}
-{{>footer}}
+{{>truefooter}}

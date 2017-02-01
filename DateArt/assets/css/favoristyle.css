@@ -25,10 +25,17 @@ figcaption img {
   min-height: 450px;
 }
 figcaption p{
+  text-align: center;
   font-family: "lithos";
   font-size: 1em;
 }
 a, a:hover, a:visited, a:active, a:focus{
   text-decoration: none;
   color: #c1272d;
+}
+.museeName {
+  text-overflow: ellipsis;
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
 }

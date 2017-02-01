@@ -49,13 +49,3 @@ a:hover, a:visited, a:link, a:active
 .description i{
   color: #000;
   margin-right:1em;
-
-}
-/* Parti Contact */
-
-.ourteam{
-  text-align: center;
-}
-.ourteam figure figcaption img{
-  margin-bottom: 12%;
-}
