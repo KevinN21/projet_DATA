@@ -12,7 +12,9 @@
     font-family: "lithos";
     src: url(../fonts/LithosPro-Regular.otf);
 }
-
+figcaption{
+ width: 100%;
+}
 /*BURGER MENU CSS*/
 
 @-webkit-keyframes slideInLeft {
@@ -76,6 +78,11 @@ svg .land:hover{
 #FR-G{
 	transform: translateX(-50px);
 }
+
+.center-cropped img {
+  min-height: 100%;
+}
+
 /* A link */
 
 a, a:hover, a:active, a:visited, a:focus{
@@ -504,4 +511,25 @@ background:#c1272d;
     font-size: 2rem;
     margin-top: 0;
     margin-bottom: 45px;
+}
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+
+.row-mas {
+ -moz-column-width: 18em;
+ -webkit-column-width: 18em;
+ -moz-column-gap: 1em;
+ -webkit-column-gap:1em;
+
+}
+
+figure{
+ display: inline-block;
+ padding:  .25rem;
+ width:  100%;
+}
+
+figcaption div, figcaption a{
+    display: block;
+    width: 100%;
 }
