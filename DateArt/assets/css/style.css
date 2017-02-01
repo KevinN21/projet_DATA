@@ -1,21 +1,12 @@
 @font-face {
-    font-family: "harlow";
-    src: url(../fonts/harlow.ttf);
-}
-
-@font-face {
-    font-family: "candara";
-    src: url(../fonts/candara.ttf);
-}
-
-@font-face {
     font-family: "lithos";
     src: url(../fonts/LithosPro-Regular.otf);
 }
 @font-face {
     font-family: "geosans";
     src: url(../fonts/GeosansLight.ttf);
-}
+
+
 
 /* svg */
 svg{
@@ -23,12 +14,20 @@ svg{
 }
 
 svg .land:hover{
-  cursor: pointer;
-	fill: #c1272d;
+    cursor: pointer;
+    fill: #c1272d;
 }
 
 #FR-G{
 	transform: translateX(-50px);
+}
+
+.center-cropped img {
+  min-height: 100%;
+}
+
+figcaption {
+ width: 100%;
 }
 /* A link */
 
@@ -418,3 +417,24 @@ address p{
         width: 100%;
     }
   }
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+
+.row-mas {
+ -moz-column-width: 18em;
+ -webkit-column-width: 18em;
+ -moz-column-gap: 1em;
+ -webkit-column-gap:1em;
+
+}
+
+figure{
+ display: inline-block;
+ padding:  .25rem;
+ width:  100%;
+}
+
+figcaption div, figcaption a{
+    display: block;
+    width: 100%;
+}
