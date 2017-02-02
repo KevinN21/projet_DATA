@@ -5,14 +5,32 @@
 @font-face {
     font-family: "geosans";
     src: url(../fonts/GeosansLight.ttf);
+}
 
+*, *:before, *:after {box-sizing:  border-box !important;}
 
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 90vh;
+    background-color: #eee;
+}
 
-/* svg */
+header{
+    background-color: #c1272d;
+    height: 9vh;
+}
+
+a, a:hover, a:active, a:visited, a:focus{
+  text-decoration: none;
+}
+
+figcaption{
+ width: 100%;
+}
 svg{
 	height: 90%
 }
-
 svg .land:hover{
     cursor: pointer;
     fill: #c1272d;
@@ -25,27 +43,13 @@ svg .land:hover{
 .center-cropped img {
   min-height: 100%;
 }
-
-figcaption {
- width: 100%;
-}
-/* A link */
-
-a, a:hover, a:active, a:visited, a:focus{
-  text-decoration: none;
+.site-title {
+    margin-bottom: 0.7%;
+    height: 8vh;
 }
 
-/*NORMAL CSS*/
-body {
-    overflow-x: hidden;
-    width: 100vw;
-    height: 90vh;
-    background-color: #eee;
-}
-
-header{
-    background-color: #c1272d;
-    height: 9vh;
+#logoCentre{
+    text-align: center;
 }
 
 .b-link a{
@@ -69,25 +73,9 @@ header .b-link img{
 footer .b-link img{
     position : relative;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-70%);
 }
 
-figcaption{
- width: 100%;
-}
-
-.center-cropped img {
-  min-height: 100%;
-}
-
-.site-title {
-    margin-bottom: 0.7%;
-    height: 8vh;
-}
-
-#logoCentre{
-    text-align: center;
-}
 .header-icons {
     margin-top:3%;
     margin: 1% ;
@@ -99,6 +87,24 @@ figcaption{
     -moz-box-shadow: 4px 4px 22px 3px rgba(0, 0, 0, 0.6);
     box-shadow: 4px 4px 22px 3px rgba(0, 0, 0, 0.6);
 }
+
+figure{
+ display: inline-block;
+ padding:  .25rem;
+ width:  100%;
+}
+
+figcaption div, figcaption a{
+    display: block;
+    width: 100%;
+}
+
+/*CONTACT CSS*/
+
+textarea {
+    resize: none;
+}
+
 
 #france {
     width: 32px;
@@ -116,62 +122,15 @@ figcaption{
     text-align: center;
 }
 
-
-
-/*END*/
-
 .da-buttons{
-  position: fixed;
+  /*position: fixed;
   margin-right: 0;
-  margin-left: 0;
+  margin-left: 0;*/
 }
 .green-heart, .red-cross, .yellow-star
 {
-  width: 90%;
+  width: 80%;
 }
-
-@media screen and (max-width: 650px) {
-  .da-buttons{
-    position: fixed;
-    margin-right: 0;
-    margin-left: 0;
-    bottom: 0;
-  }
-   .yellow-star{
-     width: 80%;
-   }
-  .green-heart, .red-cross,
-  {
-  width:100%;
-  }
-  .descrip{
-    display:none;
-  }
-  .thumbnail {
-      max-height: 370px;
-      min-height: 370px;
-      background-color: transparent;
-      border: none;
-  }
-  .thumbnail img {
-      width: 230px;
-      max-height: 300px;
-      min-height: 300px;
-      overflow: hidden;
-  }
-  .caption h1 {
-      font-size: 1.5rem;
-  }
-  .caption h2 {
-      font-size: 1.2rem;
-  }
-  footer .b-link img{
-      position : relative;
-      top: 50%;
-      transform: translateY(-50%);
-  }
-}
-
 
 
 /*ACTIVE BUTTON*/
@@ -223,15 +182,6 @@ figcaption p {
     font-size: 2em;
 }
 
-*, *:before, *:after {box-sizing:  border-box !important;}
-
-.row-mas {
- -moz-column-width: 18em;
- -webkit-column-width: 18em;
- -moz-column-gap: 1em;
- -webkit-column-gap:1em;
-
-}
 
 figure{
  display: inline-block;
@@ -244,10 +194,12 @@ figcaption div, figcaption a{
     width: 100%;
 }
 
-/*CONTACT CSS*/
+.row-mas {
+ -moz-column-width: 18em;
+ -webkit-column-width: 18em;
+ -moz-column-gap: 1em;
+ -webkit-column-gap:1em;
 
-textarea {
-    resize: none;
 }
 
 #contact-form {
@@ -405,6 +357,14 @@ address p{
     width: 1.5em;
 }
 
+.row-mas {
+ -moz-column-width: 18em;
+ -webkit-column-width: 18em;
+ -moz-column-gap: 1em;
+ -webkit-column-gap:1em;
+
+}
+
 @media screen and (max-width: 640px) {
     #header-connexion{
       width: 100%;
@@ -417,24 +377,40 @@ address p{
         width: 100%;
     }
   }
-
-*, *:before, *:after {box-sizing:  border-box !important;}
-
-.row-mas {
- -moz-column-width: 18em;
- -webkit-column-width: 18em;
- -moz-column-gap: 1em;
- -webkit-column-gap:1em;
-
-}
-
-figure{
- display: inline-block;
- padding:  .25rem;
- width:  100%;
-}
-
-figcaption div, figcaption a{
-    display: block;
-    width: 100%;
-}
+  @media screen and (max-width: 650px) {
+    .da-buttons{
+    }
+     .yellow-star{
+       width: 80%;
+     }
+    .green-heart, .red-cross,
+    {
+    width:100%;
+    }
+    .descrip{
+      display:none;
+    }
+    .thumbnail {
+        /*max-height: 370px;
+        min-height: 370px;*/
+        background-color: transparent;
+        border: none;
+    }
+    .thumbnail img {
+        /*width: 230px;
+        max-height: 300px;
+        min-height: 300px;*/
+        overflow: hidden;
+    }
+    .caption h1 {
+        font-size: 1.5rem;
+    }
+    .caption h2 {
+        font-size: 1.2rem;
+    }
+    footer .b-link img{
+        position : relative;
+        top: 50%;
+        transform: translateY(-100%);
+    }
+  }
