@@ -1,9 +1,9 @@
 {
     "protocol": "ftp",
-    "host": "kevinn.student.codeur.online",
+    "host": "",
     "port": 21,
-    "user": "kevinn",
-    "pass": "B3FVPkhDML",
+    "user": "",
+    "pass": "",
     "promptForPass": false,
     "remote": "/",
     "local": "",
