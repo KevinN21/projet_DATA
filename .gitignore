@@ -5,7 +5,7 @@
     "user": "kevinn",
     "pass": "B3FVPkhDML",
     "promptForPass": false,
-    "remote": "/www",
+    "remote": "/",
     "local": "",
     "secure": false,
     "secureOptions": null,
