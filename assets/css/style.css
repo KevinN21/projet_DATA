@@ -1,4 +1,4 @@
-@font-face {
+﻿@font-face {
     font-family: "lithos";
     src: url(../fonts/LithosPro-Regular.otf);
 }
@@ -475,4 +475,9 @@ address p {
 
 #demo {
     margin-top: 7em;
+}
+
+.hello-user{
+	color: white;
+	line-height: 5rem;
 }

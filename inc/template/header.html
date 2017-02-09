@@ -61,8 +61,13 @@
                     <img src="{{URL}}assets/svg/pin.svg" alt="Icone Pin Marker" id="france" class="header-icons">
                 </a>
             </div>
+			<div class="hello-user col-lg-2 col-lg-push-6">
+				Bonjour {{PSEUDO_HEADER}}
+			</div>
 
-            {{/USER_CONNECT}} {{^USER_CONNECT}}
+            {{/USER_CONNECT}} 
+			
+			{{^USER_CONNECT}}
             <div class="btn-header-connexion-content">
                 <a class="btn-header-connexion col-lg-1 col-lg-push-11">
                     <span class="fa fa-user"></span>

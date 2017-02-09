@@ -26,15 +26,17 @@ function callTemplate($file, $array = array()){
 	}
 	
 	$listMuseeFavoris = 0;
+	$pseudo = "invité";
 	if($connected){
 		$musee = new musee();
 		$listMuseeFavoris = sizeof($musee->museeFavoris($c['id']));
+		$pseudo = $c['nom'];
 	}
 	else{
 
 	}
 	
-      $array = array_merge($array, array('URL' => URL_PORTAL, 'NB_MUSEE_HEADER_LIKE' => $listMuseeFavoris, 'USER_CONNECT' => $connected));
+      $array = array_merge($array, array('URL' => URL_PORTAL, 'PSEUDO_HEADER' => $pseudo, 'NB_MUSEE_HEADER_LIKE' => $listMuseeFavoris, 'USER_CONNECT' => $connected));
 
     echo $m->render($file, $array);
 }
