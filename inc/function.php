@@ -25,7 +25,16 @@ function callTemplate($file, $array = array()){
 		$connected = true;
 	}
 	
-      $array = array_merge($array, array('URL' => URL_PORTAL, 'USER_CONNECT' => $connected));
+	$listMuseeFavoris = 0;
+	if($connected){
+		$musee = new musee();
+		$listMuseeFavoris = sizeof($musee->museeFavoris($c['id']));
+	}
+	else{
+
+	}
+	
+      $array = array_merge($array, array('URL' => URL_PORTAL, 'NB_MUSEE_HEADER_LIKE' => $listMuseeFavoris, 'USER_CONNECT' => $connected));
 
     echo $m->render($file, $array);
 }

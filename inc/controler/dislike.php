@@ -18,6 +18,9 @@ if(isset($index)){
 		$pos=explode(" ", $data["coordonnees"]);
 		$data['positionx']=$pos[0];
 		$data['positiony']=$pos[1];
-		echo json_encode(callTemplateReturn('museelike', $data));
+		echo json_encode([
+			'html' => callTemplateReturn('museelike', $data),
+			'count_fav' => sizeof($musee->museeFavoris($u['id']))
+		]);
 	}
 }

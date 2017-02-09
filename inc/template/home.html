@@ -45,9 +45,12 @@
 				type: "POST",
 				url: "{{URL}}"+url+"/"+id+"/",
 				success: function(result){
+					console.log('avant le parse'+result);
 					var result = JSON.parse(result);
+					console.log('après le parse '+result)
 					$('main').empty();
-					$('main').html(result);
+					$('main').html(result['html']);
+					$('.badge-count-like').text(result['count_fav']);
 				}
 			});
 		}
@@ -55,13 +58,11 @@
 		$(".button2").live('click', function() {
 			var id = $(this).data('id');
 			callAjax("like", id);
-			console.log('ok');
 			});
 
 		$(".button1").live('click', function() {
 			var id = $(this).data('id');
 			callAjax("dislike", id);
-			console.log('dev');
 		});
 
 	});
